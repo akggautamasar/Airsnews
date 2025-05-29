@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "api/send-news.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    },
+    "api/telegram-webhook.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/send-news",
+      "schedule": "30 4 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/bot",
+      "destination": "/api/telegram-webhook"
+    }
+  ]
+}
