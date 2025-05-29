@@ -6,7 +6,7 @@
     },
     "api/telegram-webhook.js": {
       "memory": 1024,
-      "maxDuration": 30
+      "maxDuration": 90
     }
   },
   "crons": [
